@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Montano Lab | Saint Louis University</title>
+    <title>Montaño Lab | Saint Louis University</title>
     <style>
         * {
             margin: 0;
@@ -617,6 +617,12 @@
             font-size: 0.98rem;
         }
 
+        .bio-title {
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-right: 0.5rem;
+        }
+
         /* Social Icons */
         .social-icons {
             display: flex;
@@ -966,7 +972,7 @@
 <body>
     <header>
         <div class="logo">
-            Montano <span>Lab</span>
+            Montaño <span>Lab</span>
         </div>
         <nav>
             <button class="nav-link active" onclick="changePage(event, 'home')">Home</button>
@@ -991,7 +997,7 @@
                     <div class="molecule"></div>
                 </div>
                 <div class="hero-content">
-                    <h1>Montano Laboratory</h1>
+                    <h1>Montaño Laboratory</h1>
                     <p class="subtitle">Filler [Main title]</p>
                     <p class="tagline">[description of labs work]</p>
                 </div>
@@ -1155,12 +1161,17 @@
                         <div class="pi-info">
                             <h3>Adriana Montaño Ph.D.</h3>
                             <p class="title">Vice Dean for Research | Professor of Pediatrics, and Biochemistry and Molecular Biology</p>
-                            <p>Dr. Montaño is an internationally recognized scientist who has made truly outstanding contributions to the field of Mucopolysaccharidoses (MPS) research.</p>
-                            <p>Dr. Montaño has over 30 years of research experience on lysosomal storage disorders. Her research has set the basis for the understanding of Morquio A disease (MPS IVA) and Sly disease (MPS VII) by providing insights into the natural history of patients showing their heterogeneity in phenotype and genotype. She has developed mouse models for Morquio A disease instrumental to carry out pre-clinical trials to assess novel treatments including enzyme replacement therapy, gene therapy, and substrate reduction therapy. Her work also includes discovery of biomarkers and the development of newborn screening for patients with MPS, which is fundamental for early detection and treatment of patients.</p>
-                            <p>Dr. Montaño received her B.Sc. degree from the University of Los Andes (Bogotá, Colombia), and Ph.D. degree from Gifu University (Japan), where she was a Monbusho Scholar. She received a Postdoctoral Fellowship from the Japan Society for the Promotion of Science (JSPS) to study molecular evolution at the Graduate University for Advanced Studies (Japan). She also served as a Postdoctoral Fellow at Kobe Pharmaceutical University (Japan) where she studied chondroitin sulfate metabolism. Dr. Montaño received a M.Sc. degree from Saint Louis University in Health Outcomes Research and Evaluation Sciences.</p>
-                            <p>Dr. Montaño is a recipient of multiple extramural grants and awards and has published over 100 scientific papers. She has participated in more than 150 conferences around the globe and holds 12 patents.</p>
+                            <div id="short-bio">
+                                <p>Dr. Montaño is an internationally recognized scientist with over 30 years of research experience on lysosomal storage disorders, particularly Mucopolysaccharidoses (MPS). She has published over 100 scientific papers, participated in more than 150 conferences globally, and holds 12 patents. <span style="color: #3b82f6; cursor: pointer; font-weight: 500;" onclick="toggleBio()">Read more</span></p>
+                            </div>
+                            <div id="full-bio" style="display: none;">
+                                <p>Dr. Montaño is an internationally recognized scientist who has made truly outstanding contributions to the field of Mucopolysaccharidoses (MPS) research.</p>
+                                <p>Dr. Montaño has over 30 years of research experience on lysosomal storage disorders. Her research has set the basis for the understanding of Morquio A disease (MPS IVA) and Sly disease (MPS VII) by providing insights into the natural history of patients showing their heterogeneity in phenotype and genotype. She has developed mouse models for Morquio A disease instrumental to carry out pre-clinical trials to assess novel treatments including enzyme replacement therapy, gene therapy, and substrate reduction therapy. Her work also includes discovery of biomarkers and the development of newborn screening for patients with MPS, which is fundamental for early detection and treatment of patients.</p>
+                                <p>Dr. Montaño received her B.Sc. degree from the University of Los Andes (Bogotá, Colombia), and Ph.D. degree from Gifu University (Japan), where she was a Monbusho Scholar. She received a Postdoctoral Fellowship from the Japan Society for the Promotion of Science (JSPS) to study molecular evolution at the Graduate University for Advanced Studies (Japan). She also served as a Postdoctoral Fellow at Kobe Pharmaceutical University (Japan) where she studied chondroitin sulfate metabolism. Dr. Montaño received a M.Sc. degree from Saint Louis University in Health Outcomes Research and Evaluation Sciences.</p>
+                                <p>Dr. Montaño is a recipient of multiple extramural grants and awards and has published over 100 scientific papers. She has participated in more than 150 conferences around the globe and holds 12 patents. <span style="color: #3b82f6; cursor: pointer; font-weight: 500;" onclick="toggleBio()">Show less</span></p>
+                            </div>
                             <div class="social-icons">
-                                <a href="[LinkedIn URL]" target="_blank" title="LinkedIn">
+                                <a href="https://www.linkedin.com/in/adriana-maria-montano-2721a758" target="_blank" title="LinkedIn">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="#0077b5">
                                         <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                                     </svg>
@@ -1178,15 +1189,16 @@
                     </div>
 
                     <h3 style="font-size: 2rem; color: #1e3a8a; margin: 3rem 0 2rem; font-weight: 300;">Lab Members</h3>
-                    <h3 style="font-size: 2rem; color: #1e3a8a; margin: 3rem 0 2rem; font-weight: 300;">Lab Members</h3>
                     <div class="team-list">
                         <!-- Qi Gan -->
                         <div class="team-member">
                             <img src="qi.png" alt="Qi Gan" class="member-photo">
                             <div class="member-info">
                                 <div class="member-name">Qi Gan M.D., M.S.</div>
-                                <div class="member-role">Research Scientist</div>
-                                <p class="member-bio">Qi earned her MD from Nanjing Medical University in Nanjing, China, and an MS in Computer Science from Webster University. In recent years, her research has focused on developing innovative therapeutic approaches for the treatment of MPS IVA (Morquio syndrome). Outside the lab, she enjoys practicing yoga and preparing tax returns for others.</p>
+                                <div class="member-role">Lab Manager</div>
+                                <p class="member-bio"><span class="bio-title">Background:</span>Qi earned her MD from Nanjing Medical University in Nanjing, China, and an MS in Computer Science from Webster University.</p>
+                                <p class="member-bio"><span class="bio-title">Interests:</span>In recent years, her research has focused on developing innovative therapeutic approaches for the treatment of MPS IVA (Morquio syndrome).</p>
+                                <p class="member-bio"><span class="bio-title">Fun Fact:</span>Outside the lab, she enjoys practicing yoga and preparing tax returns for others.</p>
                                 <div class="social-icons">
                                     <a href="[LinkedIn URL]" target="_blank" title="LinkedIn">
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="#0077b5">
@@ -1211,9 +1223,9 @@
                             <div class="member-info">
                                 <div class="member-name">Udayanga Wanninayake Ph.D.</div>
                                 <div class="member-role">Postdoctoral Researcher</div>
-                                <p class="member-bio">Uday is a postdoctoral fellow in Dr. Montano's Lab since August of 2025. He received his bachelors in chemistry in 2007 from University of Peradeniya, Sri Lanka, and PhD in organic chemistry in 2013 from Michigan State University.</p>
-                                <p class="member-bio">He is interested in protein biochemistry, enzymology and applications in enzyme replacement therapies for lysosomal storage diseases.</p>
-                                <p class="member-bio">His goal is to be a principle investigator in developing enzyme replacement therapies for lysosomal storage diseases. Uday hopes to establish a non-profit organization/foundation for the awareness of hemangiosarcoma in dogs.</p>
+                                <p class="member-bio"><span class="bio-title">Background:</span>Uday is a postdoctoral fellow in Dr. Montaño's Lab since August of 2025. He received his bachelors in chemistry in 2007 from University of Peradeniya, Sri Lanka, and PhD in organic chemistry in 2013 from Michigan State University.</p>
+                                <p class="member-bio"><span class="bio-title">Interests:</span>He is interested in protein biochemistry, enzymology and applications in enzyme replacement therapies for lysosomal storage diseases.</p>
+                                <p class="member-bio"><span class="bio-title">Future Goals:</span>His goal is to be a principle investigator in developing enzyme replacement therapies for lysosomal storage diseases. Uday hopes to establish a non-profit organization/foundation for the awareness of hemangiosarcoma in dogs.</p>
                                 <div class="social-icons">
                                     <a href="[LinkedIn URL]" target="_blank" title="LinkedIn">
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="#0077b5">
@@ -1237,8 +1249,10 @@
                             <img src="aaron.png" alt="Aaron Swenson" class="member-photo">
                             <div class="member-info">
                                 <div class="member-name">Aaron Swenson</div>
-                                <div class="member-role">4th Year Medical Student</div>
-                                <p class="member-bio">Aaron is a 4th year medical student at SLU. He received his BS in both biology and music in 2022. He is applying to combined internal medicine-pediatrics and categorical pediatrics residency programs with an interest in congenital cardiology, hospitalist medicine, or primary care. He hopes his experiences studying cardiovascular disease in Morquio A will help him implement research into his future career. In his free time, he likes to play piano, rock climb, and read.</p>
+                                <div class="member-role">Medical Student</div>
+                                <p class="member-bio"><span class="bio-title">Background:</span>Aaron is a 4th year medical student at SLU. He received his BS in both biology and music in 2022.</p>
+                                <p class="member-bio"><span class="bio-title">Future Goals:</span>He is applying to combined internal medicine-pediatrics and categorical pediatrics residency programs with an interest in congenital cardiology, hospitalist medicine, or primary care. He hopes his experiences studying cardiovascular disease in Morquio A will help him implement research into his future career.</p>
+                                <p class="member-bio"><span class="bio-title">Fun Fact:</span>In his free time, he likes to play piano, rock climb, and read.</p>
                                 <div class="social-icons">
                                     <a href="[LinkedIn URL]" target="_blank" title="LinkedIn">
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="#0077b5">
@@ -1263,7 +1277,9 @@
                             <div class="member-info">
                                 <div class="member-name">Gianna Cimarrusti-Jewhurst</div>
                                 <div class="member-role">Graduate Student</div>
-                                <p class="member-bio">Gianna is a second-year graduate student working towards a master's degree in anatomy focusing on corneal clouding in Morquio A Syndrome for her thesis project. She received her B.S. in Biomedical Engineering from Washington University in St. Louis in 2024. She is interested in all aspects of mucopolysaccharidosis research, especially orthopedic and optical pathophysiology. Her connection to MPS is personal, with her twin brother receiving a MPS I, Hurler Syndrome, diagnosis at seven months old, resulting in her passion for MPS research. She is currently applying to medical school to pursue her M.D./Ph.D. and a career in pediatric medicine. Outside of the lab, Gianna can be found with her nose in a book, working on her latest crafty project, or spending time with her family and friends.</p>
+                                <p class="member-bio"><span class="bio-title">Background:</span>Gianna is a second-year graduate student working towards a master\'s degree in anatomy focusing on corneal clouding in Morquio A Syndrome for her thesis project. She received her B.S. in Biomedical Engineering from Washington University in St. Louis in 2024.</p>
+                                <p class="member-bio"><span class="bio-title">Interests:</span>She is interested in all aspects of mucopolysaccharidosis research, especially orthopedic and optical pathophysiology. Her connection to MPS is personal, with her twin brother receiving a MPS I, Hurler Syndrome, diagnosis at seven months old, resulting in her passion for MPS research.</p>
+                                <p class="member-bio"><span class="bio-title">Future Goals:</span>She is currently applying to medical school to pursue her M.D./Ph.D. and a career in pediatric medicine. Outside of the lab, Gianna can be found with her nose in a book, working on her latest crafty project, or spending time with her family and friends.</p>
                                 <div class="social-icons">
                                     <a href="[LinkedIn URL]" target="_blank" title="LinkedIn">
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="#0077b5">
@@ -1288,7 +1304,9 @@
                             <div class="member-info">
                                 <div class="member-name">Patrick Cannon M.P.H.</div>
                                 <div class="member-role">Research Assistant</div>
-                                <p class="member-bio">Patrick is a research assistant. He received his B.A. in Biology from Washington University in St. Louis in 2018, and his M.P.H. in Epidemiology and Biostatistics from The Brown School at Washington University in St. Louis in 2022. He is interested in bioinformatics, like big data and -omics research, especially as applied to novel gene and protein interactions. He is currently applying for Ph.D. programs, hoping to continue research in bioinformatics. He is very interested in open-source software and open science and hopes to continue to use and build tools for advancing research.</p>
+                                <p class="member-bio"><span class="bio-title">Background:</span>Patrick is a research assistant. He received his B.A. in Biology from Washington University in St. Louis in 2018, and his M.P.H. in Epidemiology and Biostatistics from The Brown School at Washington University in St. Louis in 2022.</p>
+                                <p class="member-bio"><span class="bio-title">Interests:</span>He is interested in bioinformatics, like big data and -omics research, especially as applied to novel gene and protein interactions. He is currently applying for Ph.D. programs, hoping to continue research in bioinformatics.</p>
+                                <p class="member-bio"><span class="bio-title">Fun Fact:</span>He is very interested in open-source software and open science and hopes to continue to use and build tools for advancing research.</p>
                                 <div class="social-icons">
                                     <a href="[LinkedIn URL]" target="_blank" title="LinkedIn">
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="#0077b5">
@@ -1313,7 +1331,9 @@
                             <div class="member-info">
                                 <div class="member-name">Mahi Besur</div>
                                 <div class="member-role">Undergraduate Researcher</div>
-                                <p class="member-bio">Mahi is a third-year Health Sciences student with minors in Women and Gender Studies and Biology. A native of Wisconsin, she completed her secondary education at Brookfield Central High School. Her scholarly interests are focused on metabolic research, with particular emphasis on understanding and addressing health inequities in underserved populations. She is committed to contributing to evidence-based approaches that advance equitable health outcomes. Following the completion of her undergraduate studies, she intends to pursue a Doctor of Medicine (MD) degree. Beyond her academic pursuits, Mahi is an accomplished artist and an avid reader. She is also actively engaged in advocacy efforts promoting educational access and equity in scientific and medical research.</p>
+                                <p class="member-bio"><span class="bio-title">Background:</span>Mahi is a third-year Health Sciences student with minors in Women and Gender Studies and Biology. A native of Wisconsin, she completed her secondary education at Brookfield Central High School.</p>
+                                <p class="member-bio"><span class="bio-title">Interests:</span>Her scholarly interests are focused on metabolic research, with particular emphasis on understanding and addressing health inequities in underserved populations. She is committed to contributing to evidence-based approaches that advance equitable health outcomes. Following the completion of her undergraduate studies, she intends to pursue a Doctor of Medicine (MD) degree.</p>
+                                <p class="member-bio"><span class="bio-title">Fun Fact:</span>Beyond her academic pursuits, Mahi is an accomplished artist and an avid reader. She is also actively engaged in advocacy efforts promoting educational access and equity in scientific and medical research.</p>
                                 <div class="social-icons">
                                     <a href="[LinkedIn URL]" target="_blank" title="LinkedIn">
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="#0077b5">
@@ -1338,7 +1358,9 @@
                             <div class="member-info">
                                 <div class="member-name">Meghana Govindaraj</div>
                                 <div class="member-role">Undergraduate Researcher</div>
-                                <p class="member-bio">Meghana is a fourth-year student at Saint Louis University studying Neuroscience. She is interested in research relating to neurological disorders and pediatric populations, specifically children with developmental disorders. Upon completing of her degree, she hopes to attend medical school and pursue a career in pediatric neurology. In her free time, she is an amateur nail artist and enjoys working as a camp counselor for children with autism.</p>
+                                <p class="member-bio"><span class="bio-title">Background:</span>Meghana is a fourth-year student at Saint Louis University studying Neuroscience. She is interested in research relating to neurological disorders and pediatric populations, specifically children with developmental disorders.</p>
+                                <p class="member-bio"><span class="bio-title">Future Goals:</span>Upon completing of her degree, she hopes to attend medical school and pursue a career in pediatric neurology.</p>
+                                <p class="member-bio"><span class="bio-title">Fun Fact:</span>In her free time, she is an amateur nail artist and enjoys working as a camp counselor for children with autism.</p>
                                 <div class="social-icons">
                                     <a href="[LinkedIn URL]" target="_blank" title="LinkedIn">
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="#0077b5">
@@ -1463,7 +1485,7 @@
                     <h3>2023</h3>
                     <div class="publication">
                         <div class="pub-title">Growth patterns in patients with mucopolysaccharidosis VII</div>
-                        <div class="pub-authors">Adriana M Montano, Agnieszka Różdżyńska-Świątkowska, Agnieszka Jurecka, Antonio Nino Ramirez, Lin Zhang, Deborah Marsden, Raymond Y Wang, Paul Harmatz</div>
+                        <div class="pub-authors">Adriana M Montaño, Agnieszka Różdżyńska-Świątkowska, Agnieszka Jurecka, Antonio Nino Ramirez, Lin Zhang, Deborah Marsden, Raymond Y Wang, Paul Harmatz</div>
                         <div class="pub-journal">Molecular Genetics and Metabolism Reports. 2024;36:100987. DOI:https://doi.org/10.1016/j.ymgmr.2023.100987</div>
                     </div>
                     <div class="publication">
@@ -1481,7 +1503,7 @@
                 <div class="year-group">
                     <h3>2022 and Earlier</h3>
                     <div class="publication">
-                        <a href="https://scholar.google.com/citations?user=n4Y27X0AAAAJ" target="_blank"><div class="pub-title">See Dr. Montano's previous works</div></a>
+                        <a href="https://scholar.google.com/citations?user=n4Y27X0AAAAJ" target="_blank"><div class="pub-title">See Dr. Montaño's previous works</div></a>
                     </div>
                 </div>
             </div>
@@ -1560,9 +1582,9 @@
     </main>
 
     <footer>
-        <p style="font-size: 1.1rem;">Montano Laboratory</p>
+        <p style="font-size: 1.1rem;">Montaño Laboratory</p>
         <p>Department of Pediatrics | Saint Louis University School of Medicine</p>
-        <p style="margin-top: 1rem;">&copy; 2025 | Last Updated: November 2025</p>
+        <p style="margin-top: 1rem;">&copy; 2026 | Last Updated: January 2026</p>
     </footer>
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
@@ -1590,6 +1612,19 @@
         function closeModal(modalId) {
             document.getElementById(modalId).style.display = "none";
             document.body.style.overflow = "auto";
+        }
+
+        function toggleBio() {
+            var shortBio = document.getElementById("short-bio");
+            var fullBio = document.getElementById("full-bio");
+            
+            if (fullBio.style.display === "none") {
+                shortBio.style.display = "none";
+                fullBio.style.display = "block";
+            } else {
+                shortBio.style.display = "block";
+                fullBio.style.display = "none";
+            }
         }
 
         function switchPeopleTab(evt, tabName) {
